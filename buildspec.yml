@@ -10,13 +10,14 @@ phases:
       - cd app && npm install
       - aws --version && git --version && npm --version
       - uname -a
-      - ipconfig -a
       - echo "dependencies install completed `date`"
   build:
     commands:
       - echo "Starting build `date` in `pwd`"
   post_build:
     commands:
+      - echo "run tests on `date`"
+      - npm run test-single-run
       - echo "build completed on `date`"
 
 artifacts:

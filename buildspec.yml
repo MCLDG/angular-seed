@@ -8,6 +8,9 @@ phases:
     commands:
       - echo "Installing dependencies - `pwd`"
       - cd app && npm install
+      - aws --version && git --version && npm --version
+      - uname -a
+      - ipconfig -a
       - echo "dependencies install completed `date`"
   build:
     commands:

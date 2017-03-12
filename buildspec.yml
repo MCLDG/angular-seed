@@ -17,8 +17,7 @@ phases:
   post_build:
     commands:
       - echo "run tests on `date`"
-      - npm start &
-      - npm run test-single-run
+      - npm start && npm run test-single-run
       - echo "build completed on `date`"
 
 artifacts:
